@@ -17,10 +17,18 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
+Route::get('/inventory', function () {
+    return view('inventory');
+});
+
+Route::get('/payment', function () {
+    return view('payment');
+});
+
 Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
-Route::get('/inventory', function () {
-    return view('inventory');
+Route::get('/login', function () {
+    return view('login');
 });

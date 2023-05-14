@@ -10,11 +10,11 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="#about">Inventory</a></li>
-                <li><a class="nav-link scrollto" href="#services">Payment</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-                <li><a class="getstarted scrollto" href="#about">Login</a></li>
+                <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                <li><a class="nav-link scrollto" href="/inventory">Inventory</a></li>
+                <li><a class="nav-link scrollto" href="/payment">Payment</a></li>
+                <li><a class="nav-link scrollto" href="/contact-us">Contact Us</a></li>
+                <li><a class="getstarted scrollto" href="/login">Login</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
