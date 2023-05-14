@@ -53,7 +53,7 @@
       </div>
 
     </div>
-  </section>
+  </section><!-- End Contact Us Section -->
 
 </section>
 @endsection
