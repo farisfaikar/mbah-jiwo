@@ -2,8 +2,6 @@
 
 @section('container')
 <section>
-    <h1>
-        Ini halaman Contact Us
-    </h1>
+    <h1>Ini halaman Sign In</h1>
 </section>
 @endsection

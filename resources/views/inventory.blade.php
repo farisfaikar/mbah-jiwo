@@ -3,7 +3,7 @@
 @section('container')
 <section>
     <h1>
-        Ini halaman Contact Us
+        Ini halaman Inventory
     </h1>
 </section>
 @endsection
