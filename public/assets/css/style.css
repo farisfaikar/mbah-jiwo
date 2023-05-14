@@ -351,25 +351,30 @@ h6,
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  background-image: url("../img/bg_hero.png");
+  background-color: #383956;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   width: 100%;
   height: 70vh;
-  background: #fef8f5;
-  border-bottom: 2px solid #fcebe3;
+  border-bottom: 2px solid #383956;
   margin: 72px 0 -72px 0;
 }
 
 #hero h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   line-height: 56px;
-  color: #4e4039;
+  color: #fff;
 }
 
 #hero h2 {
-  color: #a08f86;
-  margin: 15px 0 0 0;
-  font-size: 24px;
+  color: #fff;
+  margin: 14px 0 0 0;
+  font-size: 18px;
+  color: #fff;
 }
 
 #hero .btn-get-started {
@@ -382,12 +387,14 @@ h6,
   border-radius: 3px;
   transition: 0.5s;
   margin-top: 30px;
-  color: #fff;
-  background: #eb5d1e;
+  color: #080810;
+  background: #E6E6F2;
 }
 
+/* CSS */
+
 #hero .btn-get-started:hover {
-  background: #ef7f4d;
+  background: #E6E6F2;
 }
 
 #hero .animated {
@@ -459,7 +466,7 @@ section {
 }
 
 .section-bg {
-  background-color: #fef8f5;
+  background-color: #383956;
 }
 
 .section-title {

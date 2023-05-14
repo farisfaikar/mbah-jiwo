@@ -83,23 +83,25 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Bettter digital experience with Ninestars</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
+          <h1>Optimalkan Kinerja dan Keuntungan Bisnis</h1>
+          <h2>Kelola stok, monitor penjualan, dan atur keuangan dengan lebih mudah dan efisien. Dapatkan kemudahan dalam pengelolaan barang, penjualan, dan keuangan toko Anda. Coba sekarang untuk meningkatkan efektivitas toko Anda!</h2>
           <div>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="#about" class="btn-get-started scrollto">Coba Inventaris</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="assets/img/hero-img.svg" class="img-fluid animated" alt="">
+          
         </div>
       </div>
     </div>
 
   </section><!-- End Hero -->
+
+
+
 
   <main id="main">
 
