@@ -52,15 +52,6 @@
                         <td>126</td>
                         <td>50</td>
                     </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td >Iphone 13 Pro</td>
-                        <td>Rp13.000.000</td>
-                        <td>Rp15.000.000</td>
-                        <td>Electronics</td>
-                        <td>50</td>
-                        <td>25</td>
-                    </tr>
                     </tbody>
                 </table>
                 <div class="text-center"><button type="submit">Add data</button></div>
