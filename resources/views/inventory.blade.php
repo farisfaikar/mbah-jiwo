@@ -52,7 +52,6 @@
                         <td>126</td>
                         <td>50</td>
                     </tr>
-<<<<<<< HEAD
                     <tr>
                         <th scope="row">4</th>
                         <td >Iphone 13 Pro</td>
@@ -62,8 +61,6 @@
                         <td>50</td>
                         <td>25</td>
                     </tr>
-=======
->>>>>>> 164d10b729001710a80704f2bafd1c4a16a8380a
                     </tbody>
                 </table>
                 <div class="text-center"><button type="submit">Add data</button></div>
