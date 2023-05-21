@@ -22,7 +22,7 @@ a {
 a:hover {
   color: #9A9CCC;
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 h1,
@@ -1173,7 +1173,7 @@ section {
   background: #9A9CCC;
 }
 
-.contact .create button[type=create] {
+.contact .create a[class=btn-create] {
     background: #218438;
     border: 0;
     padding: 5px 12px;
@@ -1182,11 +1182,11 @@ section {
     border-radius: 2px;
 }
   
-  .contact .create button[type=create]:hover {
+  .contact .create a[class=btn-create]:hover {
     background: #6ae086;
 }
 
-.contact .php-email-form button[type=edit] {
+.contact .php-email-form a[class=btn-edit] {
     background: #383956;
     border: 0;
     padding: 5px 12px;
@@ -1195,11 +1195,11 @@ section {
     border-radius: 2px;
 }
   
-  .contact .php-email-form button[type=edit]:hover {
+  .contact .php-email-form a[class=btn-edit]:hover {
     background: #9A9CCC;
 }
 
-.contact .php-email-form button[type=delete] {
+.contact .php-email-form a[class=btn-delete] {
 background: #af1d2a;
 border: 0;
 padding: 5px 12px;
@@ -1208,7 +1208,7 @@ transition: 0.4s;
 border-radius: 2px;
 }
 
-.contact .php-email-form button[type=delete]:hover {
+.contact .php-email-form a[class=btn-delete]:hover {
 background: #f6a5ab;
 }
 

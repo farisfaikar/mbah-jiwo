@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\FinanceController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,22 +20,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing-page');
-});
+Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 
-Route::get('/inventory', function () {
-    return view('inventory');
-});
+/*----------------------------------------------
+Inventory
+----------------------------------------------*/
+Route::get('/inventory', [InventoryController::class, 'index'])->name('index-inventory');
+Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
+Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
+Route::get('/inventory/edit/{id}', [InventoryController::class, 'edit'])->name('edit-inventory');
+Route::post('/inventory/update/{id}', [InventoryController::class, 'update'])->name('update-inventory');
+Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy'])->name('delete-inventory');
+// Route::get('/inventory/show/{id}', [InventoryController::class, 'show'])->name('show-inventory');
 
-Route::get('/payment', function () {
-    return view('payment');
-});
+/*----------------------------------------------
+Payment
+----------------------------------------------*/
+Route::get('/payment', [PaymentController::class, 'index'])->name('index-payment');
 
-Route::get('/contact-us', function () {
-    return view('contact-us');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
+/*----------------------------------------------
+Finance
+----------------------------------------------*/
+Route::get('/finance', [FinanceController::class, 'index'])->name('index-finance');
+Route::get('/finance/index', [FinanceController::class, 'index'])->name('index-finance');
+Route::get('/finance/edit', [FinanceController::class, 'editFinance'])->name('edit-finance');

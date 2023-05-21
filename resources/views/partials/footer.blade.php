@@ -6,7 +6,7 @@
             <div class="row">
 
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <a href="/"><img src="assets/img/logo_mbahjiwo.png" alt="mbah-jiwo" class="img-fluid"></a>
+                    <a href="/"><img src="{{ asset('assets/img/logo-mbah-jiwo.png') }}" alt="mbah-jiwo" class="img-fluid"></a>
                     <h3 class="mt-3"><b>Mbah Jiwo</b></h3>
                     <p>
                         Kelola stok, monitor penjualan, dan atur keuangan dengan lebih mudah dan efisien. <br>
@@ -16,8 +16,8 @@
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Layanan Kami</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/inventory">Inventory</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/payment">Payment</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('index-inventory') }}">Inventory</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('index-payment') }}">Payment</a></li>
                     </ul>
                 </div>
 
