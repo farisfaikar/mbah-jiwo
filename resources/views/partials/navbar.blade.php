@@ -14,7 +14,7 @@
         {{-- Navbar --}}
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                <li><a class="nav-link scrollto" href="/">Home</a></li>
                 <li><a class="nav-link scrollto" href="/inventory">Inventory</a></li>
                 <li><a class="nav-link scrollto" href="/payment">Payment</a></li>
                 <li><a class="nav-link scrollto" href="/contact-us">Contact Us</a></li>

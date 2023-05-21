@@ -1173,6 +1173,45 @@ section {
   background: #9A9CCC;
 }
 
+.contact .create button[type=create] {
+    background: #218438;
+    border: 0;
+    padding: 5px 12px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+  
+  .contact .create button[type=create]:hover {
+    background: #6ae086;
+}
+
+.contact .php-email-form button[type=edit] {
+    background: #383956;
+    border: 0;
+    padding: 5px 12px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+  
+  .contact .php-email-form button[type=edit]:hover {
+    background: #9A9CCC;
+}
+
+.contact .php-email-form button[type=delete] {
+background: #af1d2a;
+border: 0;
+padding: 5px 12px;
+color: #fff;
+transition: 0.4s;
+border-radius: 2px;
+}
+
+.contact .php-email-form button[type=delete]:hover {
+background: #f6a5ab;
+}
+
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
