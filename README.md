@@ -1,66 +1,41 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://mbahjiwo.com" target="_blank"><img src="https://github.com/farisfaikar/mbah-jiwo/assets/87220004/05e3285d-f757-461d-a446-fe1d424f88cb" width="100" alt="Laravel Logo"></a></p>
+<h1 align="center">Mbah Jiwo</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://github.com/farisfaikar/mbah-jiwo"><img src="https://img.shields.io/github/stars/farisfaikar/mbah-jiwo.svg?style=social" alt="Stars"></a>
+<img src="https://komarev.com/ghpvc/?username=farisfaikar&repo=mbah-jiwo&label=Repository%20views&color=0e75b6&style=flat" alt="Repository Views">
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Deskripsi
+Aplikasi Manajemen Toko Berbasis Web ini adalah sebuah sistem informasi yang dirancang untuk membantu pengelolaan barang, penjualan, dan keuangan pada toko secara efektif dan efisien. Aplikasi ini akan memberikan kemudahan bagi pemilik toko untuk mengelola stok barang, memonitor penjualan, serta mengatur keuangan dengan lebih mudah. Dengan demikian, aplikasi Manajemen Toko Berbasis Web ini dapat membantu pemilik toko untuk mengoptimalkan kinerja toko serta meningkatkan keuntungan bisnis.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Fitur
+Pengelolaan Offline dan Online:
+Fitur ini memungkinkan pemilik toko untuk mengelola toko fisik dan toko online dari satu platform yang sama. Dengan adanya fitur ini, pemilik toko dapat mengatur dan memperbaharui persediaan barang dan harga, mengelola pesanan, dan memantau keuangan toko baik yang datang dari penjualan offline maupun online.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Manajemen Barang
+Manajemen Stok Barang: Aplikasi ini menyediakan fitur yang memungkinkan pengguna untuk mengelola stok barang dengan mudah. Pengguna dapat menambahkan atau menghapus barang, serta mengubah informasi barang seperti nama, harga, dan jumlah stok yang tersedia.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Manajemen Keuangan
+Fitur ini memungkinkan pemilik toko untuk mengelola keuangan toko seperti laporan keuangan, penerimaan dan pengeluaran, dan manajemen akun. Dengan adanya fitur ini, pemilik toko dapat memantau dan mengelola transaksi keuangan, membuat laporan keuangan, dan mengetahui laba rugi toko.
 
-## Learning Laravel
+## Manajemen Penjualan
+Fitur ini memungkinkan pemilik toko untuk melihat dan mengelola penjualan baik yang dilakukan secara offline maupun online. Dengan adanya fitur ini, pemilik toko dapat memantau laporan penjualan, mengelola pesanan, dan melacak pengiriman barang.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Manajemen Karyawan
+Fitur ini memungkinkan pemilik toko untuk mengelola karyawan seperti pembuatan jadwal kerja, manajemen absensi, dan penggajian karyawan. Dengan adanya fitur ini, pemilik toko dapat memperbaharui jadwal kerja, mengetahui absensi karyawan, dan menghitung gaji karyawan.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Program Promosi
+Fitur ini memungkinkan pemilik toko untuk membuat program promosi, menambahkan diskon dan potongan harga, serta membuat kode kupon. Dengan adanya fitur ini, pemilik toko dapat menarik konsumen dan meningkatkan penjualan dengan memberikan promo atau diskon yang menarik.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Opsi Digital Payment
+Fitur ini memungkinkan konsumen untuk membayar menggunakan metode pembayaran digital seperti transfer bank, kartu kredit, atau e-wallet. Dengan adanya fitur ini, pemilik toko dapat meningkatkan efisiensi transaksi dan memberikan kemudahan bagi konsumen dalam melakukan pembayaran.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
+### Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
+### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
