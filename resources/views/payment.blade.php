@@ -14,7 +14,7 @@
           <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="create mb-3">
-                    <button type="create"><i class="bi bi-plus-square"></i> Tambah Data</button>
+                    <a class="btn-create"><i class="bi bi-plus-square"></i> Tambah Data</a>
                 </div>
               <table class="table table-striped">
                 <thead>
@@ -37,8 +37,8 @@
                     <td>42</td>
                     <td>Rp12.000.000</td>
                     <td>
-                        <button type="edit">Edit</button>
-                        <button type="delete">Delete</button>
+                        <a class="btn-edit">Edit</a>
+                        <a class="btn-delete">Delete</a>
                     </td>
                   </tr>
                   <tr>
@@ -49,8 +49,8 @@
                     <td>23</td>
                     <td>Rp174.000.000</td>
                     <td>
-                        <button type="edit">Edit</button>
-                        <button type="delete">Delete</button>
+                        <a class="btn-edit">Edit</a>
+                        <a class="btn-delete">Delete</a>
                     </td>
                   </tr>
                   <tr>
@@ -61,8 +61,8 @@
                     <td>12</td>
                     <td>Rp123.000.000</td>
                     <td>
-                        <button type="edit">Edit</button>
-                        <button type="delete">Delete</button>
+                        <a class="btn-edit">Edit</a>
+                        <a class="btn-delete">Delete</a>
                     </td>
                   </tr>
                 </tbody>
