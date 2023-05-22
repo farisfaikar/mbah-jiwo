@@ -13,7 +13,7 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        return view('inventory.index-inventory',  [
+        return view('inventory.inventory',  [
             'title' => 'Inventory',
             'inventory' => InventoryModel::all()
         ]);
@@ -85,7 +85,7 @@ class InventoryController extends Controller
         $inventory = InventoryModel::findOrFail($id);
         $inventory->update($data);
 
-        return redirect()->route('index-inventory');
+        return redirect()->route('inventory');
     }
 
     /**
