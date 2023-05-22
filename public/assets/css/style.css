@@ -1404,3 +1404,27 @@ background: #f6a5ab;
     padding: 3px 0;
   }
 }
+
+/*--------------------------------------------------------------
+# Finance
+--------------------------------------------------------------*/
+.finance .pengeluaran {
+    border-top: 3px solid #af1d2a;
+    border-bottom: 3px solid #af1d2a;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    font-family: "Raleway", sans-serif;
+}
+
+.finance .pemasukan {
+    border-top: 3px solid #218438;
+    border-bottom: 3px solid #218438;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    font-family: "Raleway", sans-serif;
+}
+
+.finance .keuntungan {
+    border-top: 3px solid #383956;
+    border-bottom: 3px solid #383956;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    font-family: "Raleway", sans-serif;
+}

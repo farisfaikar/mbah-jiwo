@@ -22,12 +22,13 @@ use App\Http\Controllers\PaymentController;
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
 Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/sign-in', [LoginController::class, 'sign_in'])->name('sign-in');
+Route::get('/sign-up', [LoginController::class, 'sign_up'])->name('sign-up');
 
 /*----------------------------------------------
 Inventory
 ----------------------------------------------*/
-Route::get('/inventory', [InventoryController::class, 'index'])->name('index-inventory');
+Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
 Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
 Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
 Route::get('/inventory/edit/{id}', [InventoryController::class, 'edit'])->name('edit-inventory');
@@ -38,11 +39,11 @@ Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy'])->n
 /*----------------------------------------------
 Payment
 ----------------------------------------------*/
-Route::get('/payment', [PaymentController::class, 'index'])->name('index-payment');
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 
 /*----------------------------------------------
 Finance
 ----------------------------------------------*/
-Route::get('/finance', [FinanceController::class, 'index'])->name('index-finance');
-Route::get('/finance/index', [FinanceController::class, 'index'])->name('index-finance');
-Route::get('/finance/edit', [FinanceController::class, 'editFinance'])->name('edit-finance');
+Route::get('/finance', [FinanceController::class, 'index'])->name('finance');
+// Route::get('/finance/index', [FinanceController::class, 'index'])->name('finance');
+// Route::get('/finance/edit', [FinanceController::class, 'edit'])->name('edit-finance');
