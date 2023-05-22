@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\FinanceModel;
-use App\Models\InventoryModel;
+use App\Models\Finance;
+use App\Models\Inventory;
 use Illuminate\Http\Request;
 
 class FinanceController extends Controller
@@ -11,7 +11,7 @@ class FinanceController extends Controller
     public function index()
     {
         // Retrieve the necessary data from the 'inventory' table
-        $inventoryData = InventoryModel::all();
+        $inventoryData = Inventory::all();
 
         // Perform the calculations and update the 'finance' table
         $totalPengeluaran = 0;
@@ -25,7 +25,7 @@ class FinanceController extends Controller
         $totalKeuntungan = $totalPemasukan - $totalPengeluaran;
 
         // Update or create a record in the 'finance' table
-        FinanceModel::updateOrCreate(
+        Finance::updateOrCreate(
             [],
             [
                 'total_pengeluaran' => $totalPengeluaran,

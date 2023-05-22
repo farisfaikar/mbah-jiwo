@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\InventoryModel;
+use App\Models\Inventory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,7 +13,7 @@ class InventorySeeder extends Seeder
      */
     public function run(): void
     {
-        InventoryModel::create([
+        Inventory::create([
             'id' => 1,
             'nama_barang' =>  'Nike Court Low Vision',
             'harga_beli' => 500000,
@@ -23,7 +23,7 @@ class InventorySeeder extends Seeder
             'jumlah_terjual' => 15
         ]);
 
-        InventoryModel::create([
+        Inventory::create([
             'id' => 2,
             'nama_barang' =>  'Acer Aspire 5',
             'harga_beli' => 1000000,
@@ -33,7 +33,7 @@ class InventorySeeder extends Seeder
             'jumlah_terjual' => 11
         ]);
 
-        InventoryModel::create([
+        Inventory::create([
             'id' => 3,
             'nama_barang' =>  'Redmi 9T',
             'harga_beli' => 2000000,
@@ -43,7 +43,7 @@ class InventorySeeder extends Seeder
             'jumlah_terjual' => 21
         ]);
 
-        InventoryModel::create([
+        Inventory::create([
             'id' => 4,
             'nama_barang' =>  'H&M White Shirt',
             'harga_beli' => 50000,
@@ -53,7 +53,7 @@ class InventorySeeder extends Seeder
             'jumlah_terjual' => 42
         ]);
 
-        InventoryModel::create([
+        Inventory::create([
             'id' => 5,
             'nama_barang' =>  'Kriss Vector Airsoft',
             'harga_beli' => 2500000,

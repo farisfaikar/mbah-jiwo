@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\InventoryRequest;
-use App\Models\InventoryModel;
+use App\Models\Inventory;
 use Illuminate\Http\Request;
 
 class InventoryController extends Controller
@@ -15,7 +15,7 @@ class InventoryController extends Controller
     {
         return view('inventory.inventory',  [
             'title' => 'Inventory',
-            'inventory' => InventoryModel::all()
+            'inventory' => Inventory::all()
         ]);
     }
 
@@ -34,7 +34,7 @@ class InventoryController extends Controller
      */
     public function store(InventoryRequest $request)
     {
-        InventoryModel::create([
+        Inventory::create([
             'id' => $request->id,
             'nama_barang' => $request->nama_barang,
             'harga_beli' => $request->harga_beli,
@@ -50,7 +50,7 @@ class InventoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(InventoryModel $inventoryModel)
+    public function show(Inventory $Inventory)
     {
         //
     }
@@ -60,7 +60,7 @@ class InventoryController extends Controller
      */
     public function edit(string $id)
     {
-        $selected = InventoryModel::findorfail($id);
+        $selected = Inventory::findorfail($id);
         return view('inventory.edit-inventory', [
             'title' => 'Inventory | Edit Inventory',
             'selected' => $selected
@@ -82,7 +82,7 @@ class InventoryController extends Controller
             'jumlah_terjual' => 'required|numeric|min:0',
         ]);
 
-        $inventory = InventoryModel::findOrFail($id);
+        $inventory = Inventory::findOrFail($id);
         $inventory->update($data);
 
         return redirect()->route('inventory');
@@ -93,7 +93,7 @@ class InventoryController extends Controller
      */
     public function destroy(string $id)
     {
-        $selected = InventoryModel::findorfail($id);
+        $selected = Inventory::findorfail($id);
         $selected->delete();
         return back();
     }
