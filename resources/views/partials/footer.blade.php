@@ -16,8 +16,8 @@
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Layanan Kami</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('index-inventory') }}">Inventory</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('index-payment') }}">Payment</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('inventory') }}">Inventory</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('payment') }}">Payment</a></li>
                     </ul>
                 </div>
 
