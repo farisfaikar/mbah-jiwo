@@ -11,8 +11,8 @@
                 <div class="d-flex justify-content-center">
                     <div class="php-email-form">
                         <div class="create mb-3">
-                            <a href="{{ route('create-inventory') }}" class="btn-create"><i
-                                    class="bi bi-plus-square"></i> Tambah Data</a>
+                            <a href="{{ route('create-inventory') }}" class="btn-create"><i class="bi bi-plus-square"></i>
+                                Tambah Data</a>
                         </div>
                         <div class="col-lg-12 mt-lg-0 d-flex align-items-stretch mx-auto" data-aos="fade-up"
                             data-aos-delay="200">
@@ -40,9 +40,45 @@
                                             <td>{{ $item->jumlah_stok }}</td>
                                             <td>{{ $item->jumlah_terjual }}</td>
                                             <td>
-                                                <a href="{{ route('edit-inventory', ['id' => $item->id]) }}" class="btn-edit">Edit</a>
-                                                <a href="{{ route('delete-inventory', ['id' => $item->id]) }}" class="btn-delete">Delete</a>
+                                                <a href="{{ route('edit-inventory', ['id' => $item->id]) }}"
+                                                    class="btn-edit">Edit</a>
+                                                <a href="{{ route('delete-inventory', ['id' => $item->id]) }}"
+                                                    class="btn-delete">Delete</a>
+                                                {{-- <button class="btn btn-danger btn-sm hapus" data-toggle="modal"
+                                                    data-target="#ModalDelete" data-id='#'><i
+                                                        class="fas fa-trash"></i></button> --}}
                                             </td>
+                                            {{-- <!-- Modal -->
+                                            <div class="modal fade" id="ModalDelete" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Hapus</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <form
+                                                            action="{{ route('delete-inventory', ['id' => $item->id]) }}"
+                                                            method="post" id="konfirmasiHapus">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <div class="modal-body">
+                                                                Apakah Anda yakin akan menghapus data ini?
+                                                            </div>
+                                                            <input type="text" name="id_hapus"
+                                                                class="form-control d-none" id="hapus">
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Tidak</button>
+                                                                <button type="submit" class="btn btn-primary">Ya</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div> --}}
                                         </tr>
                                     @endforeach
                                 </tbody>
