@@ -47,7 +47,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
                                     <div class="card keuntungan mt-5">
-                                        <div class="card-header">Pie Chart</div>
+                                        <div class="card-header">Pie Chart Keuangan</div>
                                         <div class="card-body" style="height: 300px">
                                             <canvas id="chart-pie" class="chartjs-chart"></canvas>
                                         </div>

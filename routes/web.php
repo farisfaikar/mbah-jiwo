@@ -45,7 +45,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/inventory/edit/{id}', [InventoryController::class, 'edit'])->name('edit-inventory');
     Route::post('/inventory/update/{id}', [InventoryController::class, 'update'])->name('update-inventory');
     Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy'])->name('delete-inventory');
-    // Route::get('/inventory/show/{id}', [InventoryController::class, 'show'])->name('show-inventory');
 });
 
 /*----------------------------------------------
@@ -58,8 +57,6 @@ Finance
 ----------------------------------------------*/
 Route::middleware(['auth'])->group(function () {
     Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
-    // Route::get('/finance/index', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
-    // Route::get('/finance/edit', [FinanceController::class, 'edit'])->middleware('auth')->name('edit-finance');
 });
 
 /*----------------------------------------------

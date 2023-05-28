@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\InventoryRequest;
 use App\Models\Inventory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class InventoryController extends Controller
 {
@@ -13,9 +14,12 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        return view('inventory.inventory',  [
+        $user = Auth::user(); // Get the currently authenticated user
+        $inventory = Inventory::where('user_id', $user->id)->get(); // Fetch inventory data for the current user
+    
+        return view('inventory.inventory', [
             'title' => 'Inventory',
-            'inventory' => Inventory::all()
+            'inventory' => $inventory
         ]);
     }
 

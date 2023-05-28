@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Finance;
 use App\Models\Inventory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FinanceController extends Controller
 {
     public function index()
     {
-        // Retrieve the necessary data from the 'inventory' table
-        $inventoryData = Inventory::all();
+        $user = Auth::user(); // Get the currently authenticated user
+
+        // Retrieve the necessary data from the 'inventory' table for the current user
+        $inventoryData = Inventory::where('user_id', $user->id)->get();
 
         // Perform the calculations and update the 'finance' table
         $totalPengeluaran = 0;

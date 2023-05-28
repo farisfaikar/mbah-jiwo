@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('inventory', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('nama_barang');
             $table->decimal('harga_beli', 14, 2);
             $table->decimal('harga_jual', 14, 2);

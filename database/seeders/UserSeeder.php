@@ -21,5 +21,14 @@ class UserSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        User::create([
+            'id' => 2,
+            'name' => 'John Doe',
+            'email' => 'johndoe@mail.com',
+            'password' => bcrypt('password'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }
