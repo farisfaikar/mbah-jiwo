@@ -29,15 +29,15 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 /*----------------------------------------------
 Inventory
 ----------------------------------------------*/
-Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
-Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
-Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
-Route::get('/inventory/edit/{id}', [InventoryController::class, 'edit'])->name('edit-inventory');
-Route::post('/inventory/update/{id}', [InventoryController::class, 'update'])->name('update-inventory');
-Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy'])->name('delete-inventory');
-// Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
+    Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
+    Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
+    Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
+    Route::get('/inventory/edit/{id}', [InventoryController::class, 'edit'])->name('edit-inventory');
+    Route::post('/inventory/update/{id}', [InventoryController::class, 'update'])->name('update-inventory');
+    Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy'])->name('delete-inventory');
     // Route::get('/inventory/show/{id}', [InventoryController::class, 'show'])->name('show-inventory');
-// });
+});
 
 /*----------------------------------------------
 Payment
