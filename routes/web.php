@@ -22,7 +22,6 @@ use App\Http\Controllers\PaymentController;
 */
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
-Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
 
 /*----------------------------------------------
 Authentication
@@ -58,6 +57,12 @@ Finance
 Route::middleware(['auth'])->group(function () {
     Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
 });
+
+/*----------------------------------------------
+Contact Us
+----------------------------------------------*/
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+Route::post('/contact-us/store', [ContactUsController::class, 'store'])->name('store-contact-us');
 
 /*----------------------------------------------
 Google

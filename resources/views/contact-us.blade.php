@@ -13,33 +13,30 @@
       <div class="row">
         <div class="d-flex justify-content-center" >
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="{{ route('store-contact-us') }}" method="POST" role="form" class="php-email-form">
+                @csrf
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">First Name</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter your first name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Last name</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter your last name" required>
+                <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama" required>
                 </div>
               </div>
               <div class="form-group mt-3 mb-3">
-                <label for="name">Email</label>
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Enter your email address" required>
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Masukkan email" required>
               </div>
-              <label for="selectExample mt-3">Subject</label>
-              <select class="form-select rounded-0 mb-3" aria-label="Default select example">
-                <option selected>Select subject</option>
-                <option value="1">Customer Service</option>
+              <label for="perihal">Perihal</label>
+              <select class="form-select rounded-0 mb-3" aria-label="Default select example" name="perihal" required>
+                <option value="Pelayanan Pelanggan" selected>Pelayanan Pelanggan</option>
+                <option value="Umpan Balik">Umpan Balik</option>
               </select>
               <div class="form-group mt-3 mb-3">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Type your subject" required>
+                <label for="judul">Judul</label>
+                <input type="text" class="form-control" name="judul" id="judul" placeholder="Masukkan judul" required>
               </div>
               <div class="form-group mt-3 mb-3">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" placeholder="Write your massage" required></textarea>
+                <label for="pesan">Pesan</label>
+                <textarea class="form-control" name="pesan" rows="10" placeholder="Tulis pesan" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
