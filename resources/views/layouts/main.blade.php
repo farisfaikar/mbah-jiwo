@@ -12,6 +12,7 @@
     <!-- Favicons -->
     <link rel="icon" href="{{ asset('assets/img/logo-mbah-jiwo.png') }}">
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    
 
     <!-- Google Fonts -->
     <link
