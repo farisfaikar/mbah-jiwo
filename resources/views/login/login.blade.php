@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="card d-flex justify-content-center">
                         <div class="card-body">
-                            <form action="{{-- route('login') --}}" method="POST">
+                            <form action="{{ route('login') }}" method="get">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
@@ -33,7 +33,7 @@
                             </div>
 
                             <div>
-                                <p>Don't have an account? <a href="{{-- route('register') --}}">Register</a></p>
+                                <p>Don't have an account? <a href="{{ route('register') }}">Register</a></p>
                             </div>
                         </div>
                     </div>

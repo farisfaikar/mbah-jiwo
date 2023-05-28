@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FinanceController;
@@ -23,6 +24,7 @@ use App\Http\Controllers\PaymentController;
 Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
 Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -56,3 +58,7 @@ Google
 ----------------------------------------------*/
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google-login');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google-callback');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
