@@ -40,6 +40,7 @@ class InventoryController extends Controller
     {
         Inventory::create([
             'id' => $request->id,
+            'user_id' => Auth::user()->id,
             'nama_barang' => $request->nama_barang,
             'harga_beli' => $request->harga_beli,
             'harga_jual' => $request->harga_jual,
