@@ -41,16 +41,4 @@ class FinanceController extends Controller
             'totalKeuntungan' => $totalKeuntungan,
         ]);
     }
-
-    public function editFinance()
-    {
-        return view('finance.edit-finance', [
-            'title' => 'Edit Finance'
-        ]);
-    }
-
-    public function update()
-    {
-
-    }
 }
