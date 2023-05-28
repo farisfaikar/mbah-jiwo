@@ -49,7 +49,7 @@
                                     <div class="card keuntungan mt-5">
                                         <div class="card-header">Pie Chart</div>
                                         <div class="card-body" style="height: 300px">
-                                            <canvas id="chart-pie" class="chartjs-chart"></canvas>
+                                            <canvas id="chart-pie"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -63,31 +63,47 @@
 @endsection
 
 @section('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
     <script>
-        var ctx = document.getElementById("chart-pie").getContext('2d');
-        var myPieChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ["Total Pengeluaran", "Total Pemasukan", "Total Keuntungan"],
-                datasets: [{
-                    data: [
-                        {{ $totalPengeluaran }},
-                        {{ $totalPemasukan }},
-                        {{ abs($totalKeuntungan) }}
-                    ],
-                    backgroundColor: [
-                        "rgba(255, 0, 0, 0.5)",
-                        "rgba(100, 255, 0, 0.5)",
-                        "rgba(200, 50, 255, 0.5)"
-                    ]
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Finance Overview'
+        document.addEventListener('DOMContentLoaded', function() {
+            var kategoriCanvas = document.getElementById('chart-pie');
+            var kategoriData = [];
+            var backgroundColors = [];
+
+            @foreach ($kategori as $kategori)
+                var jumlahTerjual = 0;
+                @foreach ($inventory as $item)
+                    @if ($item->kategori == $kategori)
+                        jumlahTerjual += parseInt({{ $item->jumlah_terjual }});
+                    @endif
+                @endforeach
+                kategoriData.push(jumlahTerjual);
+                backgroundColors.push(getRandomColor());
+            @endforeach
+
+            new Chart(kategoriCanvas, {
+                type: 'doughnut',
+                data: {
+                    labels: {!! json_encode($kategori) !!},
+                    datasets: [{
+                        data: kategoriData,
+                        backgroundColor: backgroundColors
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Jumlah Barang Terjual per Kategori'
+                    }
                 }
+            });
+
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color + '80'; // Adding alpha value (transparency)
             }
         });
     </script>

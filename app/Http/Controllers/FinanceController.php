@@ -34,11 +34,16 @@ class FinanceController extends Controller
             ]
         );
 
+        $kategori = ['Sepatu', 'Baju', 'Elektronik', 'Mainan'];
+        $inventory = Inventory::all();
+        
         return view('finance', [
             'title' => 'Finance',
             'totalPengeluaran' => $totalPengeluaran,
             'totalPemasukan' => $totalPemasukan,
             'totalKeuntungan' => $totalKeuntungan,
+            'kategori' => $kategori,
+            'inventory' => $inventory
         ]);
     }
 

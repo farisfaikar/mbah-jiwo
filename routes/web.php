@@ -42,12 +42,12 @@ Route::middleware(['auth'])->group(function () {
 /*----------------------------------------------
 Payment
 ----------------------------------------------*/
-Route::get('/payment', [PaymentController::class, 'index'])->middleware('auth')->name('payment');
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 
 /*----------------------------------------------
 Finance
 ----------------------------------------------*/
-Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
+Route::get('/finance', [FinanceController::class, 'index'])->name('finance');
 // Route::get('/finance/index', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
 // Route::get('/finance/edit', [FinanceController::class, 'edit'])->middleware('auth')->name('edit-finance');
 
