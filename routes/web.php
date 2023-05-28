@@ -7,6 +7,7 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PaymentController;
 
 /*
@@ -22,8 +23,14 @@ use App\Http\Controllers\PaymentController;
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
 Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+
+/*----------------------------------------------
+Authentication
+----------------------------------------------*/
 Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::post('login', [LoginController::class, 'authenticate'])->name('authenticate');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('store-register');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 /*----------------------------------------------

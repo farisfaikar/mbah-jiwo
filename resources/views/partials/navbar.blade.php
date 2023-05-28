@@ -18,20 +18,26 @@
                 @auth
                 <li><a class="nav-link scrollto" href="{{ route('inventory') }}">Inventory</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('finance') }}">Finance</a></li>
-                <li><a class="nav-link scrollto" href="{{ route('payment') }}">Payment</a></li>
+                {{-- <li><a class="nav-link scrollto" href="{{ route('payment') }}">Payment</a></li> --}}
                 @endauth
                 <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact Us</a></li>
+                @auth
+                <li class="dropdown">
+                    <a class="nav-link scrollto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> {{ auth()->user()->name }} <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                @endauth
                 @guest
                 <li><a class="getstarted scrollto" href="{{ route('login') }}">Login</a></li>
                 @endguest
-                @auth
-                <li>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="getstarted scrollto">Logout</button>
-                    </form>
-                </li>
-                @endauth
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
