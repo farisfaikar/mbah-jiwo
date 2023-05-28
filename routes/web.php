@@ -27,10 +27,12 @@ Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-
 /*----------------------------------------------
 Authentication
 ----------------------------------------------*/
-Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::post('login', [LoginController::class, 'authenticate'])->name('authenticate');
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/register', [RegisterController::class, 'register'])->name('store-register');
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', [LoginController::class, 'login'])->name('login');
+    Route::post('login', [LoginController::class, 'authenticate'])->name('authenticate');
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::post('/register', [RegisterController::class, 'register'])->name('store-register');
+});
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 /*----------------------------------------------
@@ -54,9 +56,11 @@ Route::get('/payment', [PaymentController::class, 'index'])->middleware('auth')-
 /*----------------------------------------------
 Finance
 ----------------------------------------------*/
-Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
-// Route::get('/finance/index', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
-// Route::get('/finance/edit', [FinanceController::class, 'edit'])->middleware('auth')->name('edit-finance');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
+    // Route::get('/finance/index', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
+    // Route::get('/finance/edit', [FinanceController::class, 'edit'])->middleware('auth')->name('edit-finance');
+});
 
 /*----------------------------------------------
 Google
