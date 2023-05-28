@@ -41,8 +41,54 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="page-content page-container" id="page-content">
+                        <div class="padding">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="card keuntungan mt-5">
+                                        <div class="card-header">Pie Chart</div>
+                                        <div class="card-body" style="height: 300px">
+                                            <canvas id="chart-pie" class="chartjs-chart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </section>
+@endsection
+
+@section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+    <script>
+        var ctx = document.getElementById("chart-pie").getContext('2d');
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Total Pengeluaran", "Total Pemasukan", "Total Keuntungan"],
+                datasets: [{
+                    data: [
+                        {{ $totalPengeluaran }},
+                        {{ $totalPemasukan }},
+                        {{ abs($totalKeuntungan) }}
+                    ],
+                    backgroundColor: [
+                        "rgba(255, 0, 0, 0.5)",
+                        "rgba(100, 255, 0, 0.5)",
+                        "rgba(200, 50, 255, 0.5)"
+                    ]
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Finance Overview'
+                }
+            }
+        });
+    </script>
 @endsection
