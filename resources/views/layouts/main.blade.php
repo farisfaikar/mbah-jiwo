@@ -53,9 +53,8 @@
     @yield('container')
 
     @include('partials.footer')
-
-    @yield('scripts')    
 </body>
+
 <!-- Vendor JS Files -->
 <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>  <!-- Add jQuery -->
 <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
@@ -67,4 +66,5 @@
 
 <!-- Template Main JS File -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
+
 </html>
