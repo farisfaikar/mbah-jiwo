@@ -18,7 +18,6 @@
                 @auth
                 <li><a class="nav-link scrollto" href="{{ route('inventory') }}">Inventory</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('finance') }}">Finance</a></li>
-                {{-- <li><a class="nav-link scrollto" href="{{ route('payment') }}">Payment</a></li> --}}
                 @endauth
                 <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact Us</a></li>
                 @auth

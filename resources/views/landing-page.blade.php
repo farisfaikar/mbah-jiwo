@@ -158,9 +158,9 @@
                                     </div>
                                     <div class="social">
                                         <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href="https://www.facebook.com/dzakijoo"><i class="bi bi-facebook"></i></a>
+                                        <a href="https://www.instagram.com/dzakijoo"><i class="bi bi-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/in/muhammad-dzaki-arrozaq-62718021b"><i class="bi bi-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +227,7 @@
             <section id="contact" class="contact">
                 <div class="container" data-aos="fade-up">
 
-                    <div class="section-titlee">
+                    <div class="section-title">
                         <h2>Contact Us</h2>
                         <p>Contact us the get started</p>
                     </div>
