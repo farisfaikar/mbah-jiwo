@@ -47,11 +47,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 /*----------------------------------------------
-Payment
-----------------------------------------------*/
-Route::get('/payment', [PaymentController::class, 'index'])->middleware('auth')->name('payment');
-
-/*----------------------------------------------
 Finance
 ----------------------------------------------*/
 Route::middleware(['auth'])->group(function () {
