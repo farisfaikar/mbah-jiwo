@@ -479,7 +479,25 @@ section {
   padding-bottom: 0;
   line-height: 1px;
   margin-bottom: 15px;
-  color: #f4f4ff;
+  color: #383956;
+}
+
+.section-title2 h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 0;
+  line-height: 1px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.section-title2 p {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .section-title p {
@@ -489,6 +507,24 @@ section {
   font-size: 32px;
   font-weight: 700;
   color: #f4f4ff;
+}
+
+.section-titlee h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 0;
+  line-height: 1px;
+  margin-bottom: 15px;
+  color: #383956;
+}
+
+.section-titlee p {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #383956;
 }
 
 .section-titlee h2 {
