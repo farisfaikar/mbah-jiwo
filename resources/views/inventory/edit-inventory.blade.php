@@ -36,7 +36,7 @@
                                 <div class="form-group mt-3 mb-3">
                                     <label for="kategori">Kategori</label>
                                     <select class="form-control" name="kategori" id="kategori" required>
-                                        <option>-- Pilih Kategori --</option>
+                                        <option disabled selected>-- Pilih Kategori --</option>
                                         <option value="Sepatu" {{ $selected->kategori == "Sepatu" ? 'selected' : '' }}>Sepatu</option>
                                         <option value="Baju" {{ $selected->kategori == "Baju" ? 'selected' : '' }}>Baju</option>
                                         <option value="Elektronik" {{ $selected->kategori == "Elektronik" ? 'selected' : '' }}>Elektronik</option>

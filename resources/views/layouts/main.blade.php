@@ -53,6 +53,8 @@
     @yield('container')
 
     @include('partials.footer')
+
+    @yield('scripts')
 </body>
 
 <!-- Vendor JS Files -->
