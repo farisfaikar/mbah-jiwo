@@ -468,7 +468,7 @@ section {
   padding-bottom: 30px;
 }
 
-.section-titlee {
+.section-title2 {
   text-align: center;
   padding-bottom: 30px;
 }
@@ -506,42 +506,6 @@ section {
   position: relative;
   font-size: 32px;
   font-weight: 700;
-  color: #f4f4ff;
-}
-
-.section-titlee h2 {
-  font-size: 24px;
-  font-weight: 700;
-  padding-bottom: 0;
-  line-height: 1px;
-  margin-bottom: 15px;
-  color: #383956;
-}
-
-.section-titlee p {
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  position: relative;
-  font-size: 32px;
-  font-weight: 700;
-  color: #383956;
-}
-
-.section-titlee h2 {
-  font-size: 24px;
-  font-weight: 700;
-  padding-bottom: 0;
-  line-height: 1px;
-  margin-bottom: 15px;
-  color: #383956;
-}
-
-.section-titlee p {
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  position: relative;
-  font-size: 32px;
-  font-weight: 700;
   color: #383956;
 }
 
@@ -555,6 +519,17 @@ section {
   bottom: 0;
   left: calc(50% - 30px);
 }
+
+.section-title2 p::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #fff;
+    bottom: 0;
+    left: calc(50% - 30px);
+  }
 
 /*--------------------------------------------------------------
 # Breadcrumbs
