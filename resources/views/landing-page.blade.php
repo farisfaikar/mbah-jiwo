@@ -44,13 +44,13 @@
                             </p>
                             <div class="row">
                                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                                    <i class="bx bx-cube-alt"></i>
+                                <i class="bi bi-box-seam-fill"></i>
                                     <h4>Kelola Inventory</h4>
                                     <p>Kelola inventaris dengan efisien dan mudah menggunakan platform kami untuk meningkatkan produktivitas
                                     </p>
                                 </div>
                                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                    <i class="bx bx-receipt"></i>
+                                <i class="bi bi-wallet"></i>
                                     <h4>Kelola Payment</h4>
                                     <p>Mudahkan proses pembayaran Anda dengan platform kami yang aman dan dapat diandalkan
                                     </p>
@@ -66,7 +66,7 @@
             <section id="services" class="services section-bg">
                 <div class="container" data-aos="fade-up">
 
-                    <div class="section-title">
+                    <div class="section-title2">
                         <h2>Layanan Kami</h2>
                         <p>Lihatlah layanan hebat yang kami tawarkan!</p>
                     </div>
@@ -74,28 +74,25 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                             <div class="icon-box">
-                                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                                <div class="icon"><i class="bi bi-handbag"></i></div>
                                 <h4 class="title"><a href="">Inventaris</a></h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate</p>
+                                <p class="description">Melacak dan mengelola stok produk secara efisien, memastikan ketersediaan barang yang akurat dan memberikan informasi terkini mengenai jumlah dan jenis produk yang tersedia.</p>
                             </div>
                         </div>
 
                         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                             <div class="icon-box">
-                                <div class="icon"><i class="bx bx-file"></i></div>
+                                <div class="icon"><i class="bi bi-wallet2"></i></div>
                                 <h4 class="title"><a href="">Pembayaran</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                    dolore eu fugiat nulla</p>
+                                <p class="description">Mengefisiensi pembelian produk melalui berbagai metode pembayaran yang aman dan terpercaya, memastikan pengalaman berbelanja yang nyaman dan tanpa hambatan.</p>
                             </div>
                         </div>
 
                         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
                             <div class="icon-box">
-                                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                                <div class="icon"><i class="bi bi-currency-dollar"></i></div>
                                 <h4 class="title"><a href="">Keuangan</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim</p>
+                                <p class="description">Pelacakan dan analisis secara real-time terhadap transaksi, pendapatan, dan pengeluaran, membantu pengguna dalam mengelola dan mengoptimalkan keuangan mereka dengan lebih efektif dan efisien.</p>
                             </div>
                         </div>
 
@@ -105,7 +102,7 @@
             </section><!-- End Services Section -->
 
             <!-- ======= Portfolio Section ======= -->
-            <section id="portfolio" class="portfolio">
+            <!-- <section id="portfolio" class="portfolio">
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
@@ -264,10 +261,10 @@
                     </div>
 
                 </div>
-            </section><!-- End Portfolio Section -->
+            </section>End Portfolio Section -->
 
             <!-- ======= F.A.Q Section ======= -->
-            <section id="faq" class="faq section-bg">
+            <!-- <section id="faq" class="faq section-bg">
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
@@ -367,15 +364,15 @@
                     </ul>
 
                 </div>
-            </section><!-- End F.A.Q Section -->
+            </section>End F.A.Q Section -->
 
             <!-- ======= Team Section ======= -->
             <section id="team" class="team">
                 <div class="container">
 
                     <div class="section-title" data-aos="fade-up">
-                        <h2>Team</h2>
-                        <p>Our team is always here to help</p>
+                        <h2>Tim</h2>
+                        <p>Tim Kami yang senantiasa membantu</p>
                     </div>
 
                     <div class="row">
@@ -389,10 +386,10 @@
                                         <span>Chief Executive Officer</span>
                                     </div>
                                     <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href="http://twitter.com/farisfaikar_r"><i class="bi bi-twitter"></i></a>
+                                        <a href="http://facebook.com/farisfaikar.r"><i class="bi bi-facebook"></i></a>
+                                        <a href="http://instagram.com/farisfaikar_r"><i class="bi bi-instagram"></i></a>
+                                        <a href="http://linkedin.com/in/farisfaikar"><i class="bi bi-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -407,10 +404,10 @@
                                         <span>Product Manager</span>
                                     </div>
                                     <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href="https://www.twitter.com/adityakurniawan"><i class="bi bi-twitter"></i></a>
+                                        <a href="https://www.facebook.com/Aditya_Kurniawan"><i class="bi bi-facebook"></i></a>
+                                        <a href="https://www.instagram.com/adit_k01"><i class="bi bi-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/in/aditya_kurniawan"><i class="bi bi-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -462,8 +459,8 @@
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
-                        <h2>Clients</h2>
-                        <p>They trusted us</p>
+                        <h2>Mitra</h2>
+                        <p>Mereka mempercayai kami</p>
                     </div>
 
                     <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -507,23 +504,23 @@
                                 <div class="address">
                                     <i class="bi bi-geo-alt"></i>
                                     <h4>Location:</h4>
-                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                    <p>Kampus UNNES, Sekaran, Gunungpati, Kota Semarang</p>
                                 </div>
 
                                 <div class="email">
                                     <i class="bi bi-envelope"></i>
                                     <h4>Email:</h4>
-                                    <p>info@example.com</p>
+                                    <p>farisfaikar.r@gmail.com</p>
                                 </div>
 
                                 <div class="phone">
                                     <i class="bi bi-phone"></i>
                                     <h4>Call:</h4>
-                                    <p>+1 5589 55488 55s</p>
+                                    <p>+62 896-4645-8649</p>
                                 </div>
 
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.647557853069!2d110.38984787450579!3d-7.050635592951611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b3a1e3a1529%3A0x4cda1f81771c5e97!2sUNNES%20-%20Universitas%20Negeri%20Semarang!5e0!3m2!1sen!2sid!4v1686494061516!5m2!1sen!2sid" 
                                     frameborder="0" style="border:0; width: 100%; height: 290px;"
                                     allowfullscreen></iframe>
                             </div>
