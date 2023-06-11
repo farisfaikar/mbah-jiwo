@@ -423,9 +423,9 @@
                                     </div>
                                     <div class="social">
                                         <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href="https://www.facebook.com/dzakijoo"><i class="bi bi-facebook"></i></a>
+                                        <a href="https://www.instagram.com/dzakijoo"><i class="bi bi-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/in/muhammad-dzaki-arrozaq-62718021b"><i class="bi bi-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -436,7 +436,7 @@
                                 <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
                                 <div class="member-info">
                                     <div class="member-info-content">
-                                        <h4>Amanda Jepson</h4>
+                                        <h4>Dea Putri A</h4>
                                         <span>Accountant</span>
                                     </div>
                                     <div class="social">
@@ -465,21 +465,21 @@
 
                     <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper align-items-center">
-                            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/clients/shopee.png" class="img-fluid"
                                     alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/clients/tokopedia.png" class="img-fluid"
                                     alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/bukalapak.png" class="img-fluid"
                                     alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/warungpintar.png" class="img-fluid"
                                     alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/clients/tokotalk.png" class="img-fluid"
                                     alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/haitoko.png" class="img-fluid"
                                     alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/ali.png" class="img-fluid"
                                     alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid"
+                            <div class="swiper-slide"><img src="assets/img/dana.png" class="img-fluid"
                                     alt=""></div>
                         </div>
                         <div class="swiper-pagination"></div>
@@ -493,8 +493,8 @@
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
-                        <h2>Contact Us</h2>
-                        <p>Contact us the get started</p>
+                        <h2>Hubungi Kami</h2>
+                        <p>Kalian bisa enghubugi nomer yang tertera jika punya alat yang memadai</p>
                     </div>
 
                     <div class="row">
