@@ -389,10 +389,10 @@
                                         <span>Chief Executive Officer</span>
                                     </div>
                                     <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href="https://www.twitter.com/farisfaikar_r"><i class="bi bi-twitter"></i></a>
+                                        <a href="https://www.facebook.com/farisfaikar.r"><i class="bi bi-facebook"></i></a>
+                                        <a href="https://www.instagram.com/farisfaikar_r"><i class="bi bi-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/in/farisfaikar"><i class="bi bi-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -439,7 +439,7 @@
                                 <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
                                 <div class="member-info">
                                     <div class="member-info-content">
-                                        <h4>Amanda Jepson</h4>
+                                        <h4>Dea Putri A.</h4>
                                         <span>Accountant</span>
                                     </div>
                                     <div class="social">
@@ -507,19 +507,19 @@
                                 <div class="address">
                                     <i class="bi bi-geo-alt"></i>
                                     <h4>Location:</h4>
-                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                    <p>Universitas Negeri Semarang, Semarang, 50229</p>
                                 </div>
 
                                 <div class="email">
                                     <i class="bi bi-envelope"></i>
                                     <h4>Email:</h4>
-                                    <p>info@example.com</p>
+                                    <p>farisfaikar.r@gmail.com</p>
                                 </div>
 
                                 <div class="phone">
                                     <i class="bi bi-phone"></i>
                                     <h4>Call:</h4>
-                                    <p>+1 5589 55488 55s</p>
+                                    <p>+62-89646458649</p>
                                 </div>
 
                                 <iframe
