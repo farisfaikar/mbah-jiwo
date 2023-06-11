@@ -268,7 +268,8 @@
 
                         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="200">
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <form action="{{ route('store-contact-us') }}" method="POST" role="form" class="php-email-form">
+                                @csrf
                                 <div class="row">
                                     <div class="form-group">
                                       <label for="nama">Nama</label>
