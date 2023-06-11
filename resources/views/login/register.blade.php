@@ -24,6 +24,10 @@
 
                     <form action="{{ route('register') }}" method="POST">
                         @csrf
+                        <div class="text-center mb-3">
+                            <h1>Register</h1>
+                        </div>
+
                         <!-- Name input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="name">Name</label>
@@ -65,8 +69,12 @@
                         </div>
 
                         <!-- Submit button -->
-                        <div class="text-center">
+                        <div class="text-center mb-5">
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                        </div>
+
+                        <div class="text-center">
+                            <p>Already have an account? <a href="{{ route('login') }}">Login</a></p>
                         </div>
 
                     </form>
