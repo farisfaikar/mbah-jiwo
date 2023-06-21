@@ -102,4 +102,8 @@ class InventoryController extends Controller
         $selected->delete();
         return back();
     }
+
+    public function admin() {
+        return view('admin.admin-inventory', ['title' => 'Inventory | Admin Inventory']);
+    }
 }

@@ -37,7 +37,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 /*----------------------------------------------
 Inventory
 ----------------------------------------------*/
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'user-role:user'])->group(function () {
     Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
     Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
     Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
@@ -46,10 +46,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy'])->name('delete-inventory');
 });
 
+Route::middleware(['auth', 'user-role:admin'])->group(function () {
+    Route::get('/admin/inventory', [InventoryController::class, 'admin'])->name('admin-inventory');
+});
+
 /*----------------------------------------------
 Finance
 ----------------------------------------------*/
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'user-role:user'])->group(function () {
     Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
 });
 
