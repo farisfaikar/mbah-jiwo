@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SuperAdmin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SuperAdminController extends Controller
 {
@@ -11,6 +13,8 @@ class SuperAdminController extends Controller
      */
     public function index()
     {
-        return view('super-admin', ['title' => 'Super Admin']);
+        $user = Auth::user(); // Get the currently authenticated user
+        $data = SuperAdmin::where('id', $user->id)->get()->first(); // Fetch inventory data for the current user
+        return view('super-admin', ['title' => 'Super Admin', 'data' => $data]);
     }
 }

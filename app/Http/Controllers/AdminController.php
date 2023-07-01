@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -11,6 +13,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin', ['title' => 'Admin']);
+        $user = Auth::user(); // Get the currently authenticated user
+        $data = Admin::where('user_id', $user->id)->get()->first(); // Fetch inventory data for the current user
+        return view('admin', ['title' => 'Admin', 'data' => $data]);
     }
 }

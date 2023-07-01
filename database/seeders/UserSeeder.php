@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'name' => 'John Doe',
             'email' => 'johndoe@mail.com',
             'password' => bcrypt('password'),
-            'role' => 1,
+            'role' => 0,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
             'name' => 'Jane Doe',
             'email' => 'janedoe@mail.com',
             'password' => bcrypt('password'),
-            'role' => 2,
+            'role' => 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -48,7 +48,7 @@ class UserSeeder extends Seeder
             'name' => 'Johnathan Doe',
             'email' => 'johnathandoe@mail.com',
             'password' => bcrypt('password'),
-            'role' => 3,
+            'role' => 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -58,7 +58,7 @@ class UserSeeder extends Seeder
             'name' => 'Nathan Doe',
             'email' => 'nathandoe@mail.com',
             'password' => bcrypt('password'),
-            'role' => 0,
+            'role' => 2,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -68,7 +68,7 @@ class UserSeeder extends Seeder
             'name' => 'Neuman Doe',
             'email' => 'neumandoe@mail.com',
             'password' => bcrypt('password'),
-            'role' => 1,
+            'role' => 2,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -78,7 +78,7 @@ class UserSeeder extends Seeder
             'name' => 'Angelina Doe',
             'email' => 'angelinadoe@mail.com',
             'password' => bcrypt('password'),
-            'role' => 2,
+            'role' => 3,
             'created_at' => now(),
             'updated_at' => now()
         ]);

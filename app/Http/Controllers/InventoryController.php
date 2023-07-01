@@ -16,7 +16,6 @@ class InventoryController extends Controller
     {
         $user = Auth::user(); // Get the currently authenticated user
         $inventory = Inventory::where('user_id', $user->id)->get(); // Fetch inventory data for the current user
-    
         return view('inventory.inventory', [
             'title' => 'Inventory',
             'inventory' => $inventory
