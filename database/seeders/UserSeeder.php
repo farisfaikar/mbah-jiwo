@@ -32,5 +32,65 @@ class UserSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        User::create([
+            'id' => 3,
+            'name' => 'Jane Doe',
+            'email' => 'janedoe@mail.com',
+            'password' => bcrypt('password'),
+            'role' => 2,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        User::create([
+            'id' => 4,
+            'name' => 'Johnathan Doe',
+            'email' => 'johnathandoe@mail.com',
+            'password' => bcrypt('password'),
+            'role' => 3,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        User::create([
+            'id' => 5,
+            'name' => 'Nathan Doe',
+            'email' => 'nathandoe@mail.com',
+            'password' => bcrypt('password'),
+            'role' => 0,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        User::create([
+            'id' => 6,
+            'name' => 'Neuman Doe',
+            'email' => 'neumandoe@mail.com',
+            'password' => bcrypt('password'),
+            'role' => 1,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        User::create([
+            'id' => 7,
+            'name' => 'Angelina Doe',
+            'email' => 'angelinadoe@mail.com',
+            'password' => bcrypt('password'),
+            'role' => 2,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        User::create([
+            'id' => 8,
+            'name' => 'Michael Doe',
+            'email' => 'michaeldoe@mail.com',
+            'password' => bcrypt('password'),
+            'role' => 3,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

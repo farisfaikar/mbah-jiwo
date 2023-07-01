@@ -15,8 +15,6 @@ class Inventory extends Model
     protected $primaryKey = "id";
 
     protected $fillable = [
-        'id',
-        'user_id',
         'nama_barang',
         'harga_beli',
         'harga_jual',

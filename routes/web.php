@@ -9,6 +9,10 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\GuestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +41,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 /*----------------------------------------------
 Inventory
 ----------------------------------------------*/
-Route::middleware(['auth', 'user-role:user'])->group(function () {
+Route::middleware(['auth', 'user-role:super_admin,admin,client'])->group(function () {
     Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
     Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
     Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
@@ -53,7 +57,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
 /*----------------------------------------------
 Finance
 ----------------------------------------------*/
-Route::middleware(['auth', 'user-role:user'])->group(function () {
+Route::middleware(['auth', 'user-role:super_admin,admin,client'])->group(function () {
     Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
 });
 
@@ -68,3 +72,17 @@ Google
 ----------------------------------------------*/
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google-login');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google-callback');
+
+// ============== Testing Multi Auth ==============
+Route::middleware(['auth', 'user-role:super_admin'])->group(function () {
+    Route::get('/super-admin', [SuperAdminController::class, 'index'])->name('super-admin');
+});
+Route::middleware(['auth', 'user-role:admin'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+});
+Route::middleware(['auth', 'user-role:client'])->group(function () {
+    Route::get('/client', [ClientController::class, 'index'])->name('client');
+});
+Route::middleware(['auth', 'user-role:guest'])->group(function () {
+    Route::get('/guest', [GuestController::class, 'index'])->name('guest');
+});

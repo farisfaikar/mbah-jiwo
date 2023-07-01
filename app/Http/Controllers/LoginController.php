@@ -28,10 +28,14 @@ class LoginController extends Controller
         
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            if (Auth::user()->role == "admin") {
+            if (Auth::user()->role == "super_admin") {
+                return redirect()->route('super-admin');
+            } else if (Auth::user()->role == "admin") {
                 return redirect()->route('admin-inventory');
-            } else if (Auth::user()->role == "user") {
-                return redirect()->route('inventory');
+            } else if (Auth::user()->role == "client") {
+                return redirect()->route('client');
+            } else if (Auth::user()->role == "guest") {
+                return redirect()->route('guest');
             }
         }
  

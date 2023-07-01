@@ -14,7 +14,6 @@ class ContactUs extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id',
         'nama',
         'email',
         'perihal',
