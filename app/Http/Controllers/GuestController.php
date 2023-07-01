@@ -14,7 +14,7 @@ class GuestController extends Controller
     public function index()
     {
         $user = Auth::user(); // Get the currently authenticated user
-        $data = Guest::where('id', $user->id)->get(); // Fetch inventory data for the current user
+        $data = Guest::where('id', $user->id)->get()->first(); // Fetch inventory data for the current user
         return view('guest', ['title' => 'Guest', 'data' => $data]);
     }
 }
