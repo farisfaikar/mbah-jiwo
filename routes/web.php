@@ -8,7 +8,6 @@ use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
