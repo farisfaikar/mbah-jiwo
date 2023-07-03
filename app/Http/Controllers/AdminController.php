@@ -14,6 +14,7 @@ class AdminController extends Controller
     public function index()
     {
         $user = Auth::user(); // Get the currently authenticated user
+        dd($user);
         $data = Admin::where('user_id', $user->id)->get()->first(); // Fetch inventory data for the current user
         return view('admin', ['title' => 'Admin', 'data' => $data]);
     }

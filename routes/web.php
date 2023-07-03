@@ -50,7 +50,7 @@ Route::middleware(['auth', 'user-role:super_admin,admin,client'])->group(functio
     Route::get('/inventory/delete/{id}', [InventoryController::class, 'destroy'])->name('delete-inventory');
 });
 
-Route::middleware(['auth', 'user-role:admin'])->group(function () {
+Route::middleware(['auth', 'user-role:super_admin,admin'])->group(function () {
     Route::get('/admin/inventory', [InventoryController::class, 'admin'])->name('admin-inventory');
 });
 
