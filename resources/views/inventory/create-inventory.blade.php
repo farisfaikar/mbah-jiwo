@@ -14,7 +14,7 @@
                     <div class="d-flex justify-content-center">
                         <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                             <form action="{{ route('store-inventory') }}" method="post" class="php-email-form">
-                                {{ csrf_field() }}
+                                @csrf
                                 <div class="form-group mt-3 mb-3">
                                     <label for="nama_barang">Nama Barang</label>
                                     <input type="text" name="nama_barang" class="form-control" id="nama_barang"
@@ -61,3 +61,4 @@
             </div>
         </section><!-- End Contact Us Section -->
     </section>
+@endsection
