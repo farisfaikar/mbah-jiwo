@@ -8,6 +8,7 @@ use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 /*----------------------------------------------
 Inventory
 ----------------------------------------------*/
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {  // TODO Add multi-auth:client
     Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
     Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
     Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
@@ -51,6 +52,27 @@ Finance
 Route::middleware(['auth'])->group(function () {
     Route::get('/finance', [FinanceController::class, 'index'])->middleware('auth')->name('finance');
 });
+
+/*----------------------------------------------
+Admin
+----------------------------------------------*/
+Route::middleware(['auth'])->group(function () {  // TODO Add multi-auth:admin
+    // User
+    Route::get('admin/user', [AdminController::class, 'user'])->name('user');
+    Route::get('admin/user/create', [AdminController::class, 'create'])->name('create-user');
+    Route::post('admin/user/store', [AdminController::class, 'store'])->name('store-user');
+    Route::get('admin/user/{id}', [AdminController::class, 'show'])->name('show-user');
+    Route::get('admin/user/edit/{user}', [AdminController::class, 'edit'])->name('edit-user');
+    Route::post('admin/user/update/{user}', [AdminController::class, 'update'])->name('update-user');
+    Route::get('admin/user/delete/{user}', [AdminController::class, 'destroy'])->name('delete-user');
+
+    // Inventory
+    Route::get('admin/user/{id}/inventory', [AdminController::class, 'inventory'])->name('admin-inventory');
+
+    // Finance
+    Route::get('admin/user/{id}/finance', [AdminController::class, 'finance'])->name('admin-finance');
+});
+
 
 /*----------------------------------------------
 Contact Us
