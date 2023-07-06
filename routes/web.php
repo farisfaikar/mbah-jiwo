@@ -9,6 +9,7 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,8 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 /*----------------------------------------------
 Inventory
 ----------------------------------------------*/
-Route::middleware(['auth'])->group(function () {  // TODO Add multi-auth:client
+Route::middleware(['auth', 'multi-auth:admin,client'])->group(function () {
+    Route::get('/client', [ClientController::class, 'client'])->name('client');
     Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
     Route::get('/inventory/create', [InventoryController::class, 'create'])->name('create-inventory');
     Route::post('/inventory/store',  [InventoryController::class, 'store'])->name('store-inventory');
@@ -56,7 +58,7 @@ Route::middleware(['auth'])->group(function () {
 /*----------------------------------------------
 Admin
 ----------------------------------------------*/
-Route::middleware(['auth'])->group(function () {  // TODO Add multi-auth:admin
+Route::middleware(['auth', 'multi-auth:admin'])->group(function () {
     // User
     Route::get('admin/user', [AdminController::class, 'user'])->name('user');
     Route::get('admin/user/create', [AdminController::class, 'create'])->name('create-user');
@@ -71,6 +73,9 @@ Route::middleware(['auth'])->group(function () {  // TODO Add multi-auth:admin
 
     // Finance
     Route::get('admin/user/{id}/finance', [AdminController::class, 'finance'])->name('admin-finance');
+
+    // Admin
+    Route::get('admin', [AdminController::class, 'admin'])->name('admin');
 });
 
 

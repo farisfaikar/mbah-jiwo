@@ -2,16 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
+use App\Models\Client;
 use App\Models\Finance;
 use App\Models\Inventory;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    public function admin()
+    {
+        $auth_user = Auth::user();
+        $user = User::where('id', $auth_user->id)->first();
+        $admin = Admin::where('user_id', $auth_user->id)->first();
+        
+        $data = [
+            'name' => $user->name,
+            'email' => $user->email,
+            'job' => $admin->job,
+            'salary' => $admin->salary,
+        ];
+
+        return view('admin.admin', [
+            'title' => 'Admin | Dashboard',
+            'data' => $data,
+        ]);
+    }
+    
     public function user()
     {
         return view('admin.user', ['title' => 'Admin | User', 'users' => User::all()]);
@@ -66,7 +88,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.create-user', ['title' => 'Admin | Create User']);
     }
 
     /**
@@ -74,7 +96,26 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+
+        if ($request->role == 'admin') {
+            Admin::create([
+                'user_id' => User::where('email', $request->email)->first()->id,
+                'job' => $request->job,
+                'salary' => $request->salary,
+            ]);
+        } else if ($request->role == 'client') {
+            Client::create([
+                'user_id' => User::where('email', $request->email)->first()->id,
+                'address' => $request->address,
+                'phone' => $request->phone,
+            ]);
+        }
+        return redirect()->route('user');
     }
 
     /**

@@ -16,8 +16,14 @@
             <ul>
                 <li><a class="nav-link scrollto" href="{{ route('landing-page') }}">Home</a></li>
                 @auth
-                <li><a class="nav-link scrollto" href="{{ route('inventory') }}">Inventory</a></li>
-                <li><a class="nav-link scrollto" href="{{ route('finance') }}">Finance</a></li>
+                    @if (Auth::user()->role == 'client')
+                        <li><a class="nav-link scrollto" href="{{ route('inventory') }}">Inventory</a></li>
+                        <li><a class="nav-link scrollto" href="{{ route('finance') }}">Finance</a></li>
+                        <li><a class="nav-link scrollto" href="{{ route('client') }}">Client</a></li>
+                    @elseif (Auth::user()->role == 'admin')
+                        <li><a class="nav-link scrollto" href="{{ route('user') }}">User</a></li>
+                        <li><a class="nav-link scrollto" href="{{ route('admin') }}">Admin</a></li>
+                    @endif
                 @endauth
                 <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact Us</a></li>
                 @auth
