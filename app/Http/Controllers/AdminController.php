@@ -105,8 +105,8 @@ class AdminController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'photo' => $filename,
             'role' => $request->role,
+            'photo' => $filename,
             'email_verified_at' => now(),
         ]);
 
