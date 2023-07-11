@@ -14,14 +14,6 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        $adminCount = User::where('role', 'admin')->count();
-
-        if ($adminCount > 0) {
-            Admin::factory($adminCount)->create([
-                'user_id' => function () {
-                    return User::where('role', 'admin')->pluck('id')->random();
-                },
-            ]);
-        }
+        Admin::factory()->create(['user_id' => 1]);
     }
 }

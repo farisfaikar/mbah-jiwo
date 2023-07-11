@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
+use App\Models\Client;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -25,7 +27,7 @@ class UserSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        
+
         User::create([
             'id' => 2,
             'name' => 'John Doe',
@@ -38,6 +40,12 @@ class UserSeeder extends Seeder
             'updated_at' => now()
         ]);
 
-        User::factory(5)->create();
+        User::factory(5)->create()->each(function ($user) {
+            if ($user->role === 'client') {
+                Client::factory()->create(['user_id' => $user->id]);
+            } else if ($user->role === 'admin') {
+                Admin::factory()->create(['user_id' => $user->id]);
+            }
+        });
     }
 }

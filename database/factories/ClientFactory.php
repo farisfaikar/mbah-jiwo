@@ -18,7 +18,7 @@ class ClientFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::pluck('id')->random(),
+            'user_id' => User::where('role', 'client')->pluck('id')->random(),
             'address' => fake()->address(),
             'phone' => fake()->phoneNumber(),
         ];

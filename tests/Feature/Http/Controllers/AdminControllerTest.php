@@ -38,7 +38,7 @@ class AdminControllerTest extends TestCase
         $response->assertRedirect(route('login'));
     }
 
-    public function createUser(): User
+    private function createUser(): User
     {
         $user = User::factory()->state(['role' => 'admin'])->create();
         Admin::factory()->create();

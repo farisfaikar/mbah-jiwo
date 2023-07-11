@@ -14,14 +14,6 @@ class ClientSeeder extends Seeder
      */
     public function run(): void
     {
-        $clientCount = User::where('role', 'client')->count();
-
-        if ($clientCount > 0) {
-            Client::factory($clientCount)->create([
-                'user_id' => function () {
-                    return User::where('role', 'client')->pluck('id')->random();
-                },
-            ]);
-        }
+        Client::factory()->create(['user_id' => 2]);
     }
 }
