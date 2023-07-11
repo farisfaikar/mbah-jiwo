@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Http\Middleware\VerifyCsrfToken;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -39,6 +40,7 @@ class InventoryControllerTest extends TestCase
     public function test_store_inventory(): void
     {
         // Arrange
+        $this->withoutMiddleware(VerifyCsrfToken::class);
         $user = $this->createUser();
         $items = [
             'id' => 1,

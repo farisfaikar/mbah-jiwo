@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="d-flex justify-content-center">
                         <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                            <form action="{{ route('store-user') }}" method="post" class="php-email-form">
+                            <form action="{{ route('store-user') }}" method="post" class="php-email-form" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mt-3 mb-3">
                                     <label for="name">Name</label>
@@ -29,6 +29,10 @@
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" name="password" id="password"
                                         placeholder="Masukkan password" required>
+                                </div>
+                                <div class="form-group mt-3 mb-3">
+                                    <label for="photo">Photo</label>
+                                    <input type="file" class="form-control" name="photo" id="photo" accept="image/*">
                                 </div>
                                 <div class="form-group mt-3 mb-3">
                                     <label for="role">Role</label>

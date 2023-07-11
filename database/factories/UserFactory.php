@@ -20,6 +20,7 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
+            'photo' => fake()->image(storage_path('app/public/photos'), 200, 200, 'people', false),
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
             'role' => fake()->randomElement(['admin', 'client']),

@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -23,6 +24,7 @@ class ContactUsControllerTest extends TestCase
     public function test_store_contact_us(): void
     {
         // Arrange
+        $this->withoutMiddleware(VerifyCsrfToken::class);
         $information = [
             'nama' => 'John Doe',
             'email' => 'johndoe@mail.com',

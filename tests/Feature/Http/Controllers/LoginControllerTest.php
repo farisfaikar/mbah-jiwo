@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -29,6 +30,7 @@ class LoginControllerTest extends TestCase
     public function test_logout(): void
     {
         // Arrange
+        $this->withoutMiddleware(VerifyCsrfToken::class);
         $user = $this->createUser();
 
         // Act

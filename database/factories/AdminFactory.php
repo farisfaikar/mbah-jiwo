@@ -18,7 +18,6 @@ class AdminFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::where('role', 'admin')->pluck('id')->random(),
             'job' => fake()->randomElement(['Software Engineer', 'Tech Lead', 'Supervisor']),
             'salary' => fake()->randomFloat(2, 5000, 100000),
         ];

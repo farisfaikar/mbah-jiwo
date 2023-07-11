@@ -15,6 +15,7 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
+                                        <th scope="col">Photo</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Job</th>
@@ -23,6 +24,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td><img src="{{ asset('storage/photos/' . $data['photo']) }}" width="100" height="100"></td>
                                         <td>{{ $data['name'] }}</td>
                                         <td>{{ $data['email'] }}</td>
                                         <td>{{ $data['job'] }}</td>

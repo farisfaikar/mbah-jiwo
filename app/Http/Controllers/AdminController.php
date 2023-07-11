@@ -9,6 +9,7 @@ use App\Models\Inventory;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -20,10 +21,11 @@ class AdminController extends Controller
         $auth_user = Auth::user();
         $user = User::where('id', $auth_user->id)->first();
         $admin = Admin::where('user_id', $auth_user->id)->first();
-        
+
         $data = [
             'name' => $user->name,
             'email' => $user->email,
+            'photo' => $user->photo,
             'job' => $admin->job,
             'salary' => $admin->salary,
         ];
@@ -33,7 +35,7 @@ class AdminController extends Controller
             'data' => $data,
         ]);
     }
-    
+
     public function user()
     {
         return view('admin.user', ['title' => 'Admin | User', 'users' => User::all()]);
@@ -96,10 +98,16 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
+        $path = $request->file('photo')->storeAs('photos', $request->file('photo')->hashName());
+        $filename = basename($path);
+
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'photo' => $filename,
+            'role' => $request->role,
+            'email_verified_at' => now(),
         ]);
 
         if ($request->role == 'admin') {
@@ -115,6 +123,7 @@ class AdminController extends Controller
                 'phone' => $request->phone,
             ]);
         }
+
         return redirect()->route('user');
     }
 
@@ -133,7 +142,7 @@ class AdminController extends Controller
     {
         $user = User::findorfail($user->id);
         return view('admin.edit-user', [
-            'title' => 'Admin | Edit User', 
+            'title' => 'Admin | Edit User',
             'user' => $user
         ]);
     }
@@ -143,15 +152,27 @@ class AdminController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        // Remove previous image if it exists
+        if ($user->photo && Storage::exists('photos/' . $user->photo)) {
+            Storage::delete('photos/' . $user->photo);
+        }
+
+        $user_new = $request->except('photo');
+
+        if ($request->hasFile('photo')) {
+            $path = $request->file('photo')->storeAs('photos', $request->file('photo')->hashName());
+            $filename = basename($path);
+            $user_new['photo'] = $filename;
+        }
+
         $data = $request->validate([
             'id' => 'required',
             'name' => 'required',
             'email' => 'required|email',
-            'updated_at' => now(),
         ]);
 
         $users = User::findOrFail($user->id);
-        $users->update($data);
+        $users->update($user_new);
 
         return redirect()->route('user');
     }
@@ -162,6 +183,10 @@ class AdminController extends Controller
     public function destroy(User $user)
     {
         $selected = User::findorfail($user->id);
+        // Delete the user's photo from storage
+        if ($selected->photo) {
+            Storage::delete('photos/' . $selected->photo);
+        }
         $selected->delete();
         return back();
     }

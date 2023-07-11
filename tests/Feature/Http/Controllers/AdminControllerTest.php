@@ -40,9 +40,9 @@ class AdminControllerTest extends TestCase
 
     private function createUser(): User
     {
-        $user = User::factory()->state(['role' => 'admin'])->create();
-        Admin::factory()->create();
+        $user = User::factory(1)->state(['role' => 'admin'])->create()->first();
+        Admin::factory()->create(['user_id' => $user->id]);
+        
         return $user;
-
     }
 }
